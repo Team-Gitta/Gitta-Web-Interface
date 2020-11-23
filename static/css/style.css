@@ -1,0 +1,114 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    background: whitesmoke;
+    height:100%;
+    font-family: 'Nerko One', cursive
+}
+.container {
+    margin: auto;
+    margin-top: 2%;
+    height: 92%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    background-color: white;
+
+}
+.header {
+    display: flex;
+    height: 18%;
+    padding: 0 20px;
+    align-items: center;
+    background: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+.header .title {
+    margin: 20px;
+    margin-top: 30px;
+    font-size: 90px;
+    #color: #343434;
+    color: #1a6361;
+
+}
+.title_info{
+    font-size:35px;
+    display: inline-block;
+    margin-top: 30px;
+    font-family: 'Gamja Flower', cursive;
+     color: #3e3e3e
+}
+.content {
+  flex: 1;
+  display: flex;
+    height: 450px;
+}
+
+.aside {
+
+  padding: 0 20px;
+  #background: #f0f3f0;
+    #background: #dbe0dc;
+    background: #7caf84;
+    margin-left: 20px;
+    margin-right: 15px;
+    flex: 1;
+    border-radius: 10px;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 5px;
+
+}
+.main {
+    width:77%;
+    #background: #ffeeee;
+    background: #d8e8dd;
+      padding: 0 20px;
+
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 5px;
+
+}
+.footer {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 10%;
+    font-size: 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+.menu_info {
+    padding: 10px;
+    font-size:35px;
+    color: #1a6361;
+}
+
+
+a{
+    text-decoration: none;
+    #color: #3e3e3e;
+    color: #fafffa;
+    text-shadow: -2px 0 #091709, 0 2px #091709 , 2px 0 #091709 0 -2px #091709 ;
+
+}
+a:hover{
+    color: #ffadad;
+}
+.menu{
+    padding-bottom: 10px;
+    #color: #70a88d;
+    color: #71f143;
+    font-size : 35px;
+    text-shadow: -2px 0 #091709, 0 2px #091709, 2px 0 #091709, 0 -2px #091709;
+}

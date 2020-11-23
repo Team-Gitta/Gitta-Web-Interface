@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mypage.css') }}">
+</head>
+<body><div class="container">
+  <header class="header">
+    <h1>Header</h1>
+  </header>
+  <div class="content">
+    <aside class="aside">
+      <h3>Sidebar</h3>
+      <p>~~</aside>
+    <main class="main">
+      <div class="qrimg">
+      <img src="{{ url_for('static', filename='images/qrcode.png') }}"></div>
+      <div class="result_table">
+      <table>
+        {%for key, value in result.items() %}
+        <tr>
+          <th> {{key}}
+          </th>
+          <td>{{value}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+        </div>
+      <p>~~~</p>
+    </main>
+
+  </div>
+  <footer class="footer">
+    &copy;gitta
+  </footer>
+</div>
+</body>
+</html>

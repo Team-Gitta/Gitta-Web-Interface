@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+      <h2>Main Content</h2>
+        <form action="/result", method="POST">
+            <p>화분이름<input type="text" name="name" required></p>
+            <p>화분높이<input type="number" name="pot_height" min="1" max="30" required></p>
+            <p>물받이높이<input type="number" name="tray_height" min="1" max="30" required></p>
+            <p>물주기(1~30)<input type="number" name="period" min="1" max="30"  required></p>
+            <p>물 줄 시간<input type="time" name="time" require></p>
+            <p>물 양(1~5)<input type="number" name="water" min="1" max="5" require></p>
+            <input type="submit" value="REGISTER">
+        </form>
+      <p>~~~</p>
+{% endblock %}

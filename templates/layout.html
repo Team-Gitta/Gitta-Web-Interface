@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body><div class="container">
+  <header class="header">
+    <span class="title">Gitta</span> <span class="title_info">: 물을 긷다</span>
+  </header>
+  <div class="content">
+    <aside class="aside">
+      <div class = "menu_info">menu</div>
+      <div class="menu"> <i class="fa fa-leaf"></i> <a href="/register">REGISTER</a></div>
+      <div class="menu"> <i class="fa fa-leaf"></i> <a href="/mypage">MYPAGE</a></div>
+     </aside>
+    <main class="main">
+    {% block content %}{% endblock %}
+
+    </main>
+
+  </div>
+  <footer class="footer">
+    &copy;Gitta
+  </footer>
+</div>
+</body>
+</html>
