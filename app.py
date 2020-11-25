@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('layout.html')
+    return render_template('index.html')
 
 @app.route("/register")
 def register():
@@ -34,19 +34,10 @@ def result():
         water = int(request.form.get('water'))
 
         id = USERNAME+'_'+name
-
-        print(id, name, pot_height, tray_height, period, time, water)
         insert = 'insert into {} VALUES( \"{}\", \"{}\", {}, {}, {}, \"{}\", {})'.format(USERNAME, id, name, pot_height, tray_height, period, time, water)
-        print(insert)
-        #cursor.execute(f'insert into {USERNAME} VALUES("{USERNAME}", {name}, {pot_height}, {tray_height}, {period}, {time}, {water})')
         cursor.execute(insert)
         db.commit()
-
-
-        #data = request.args.get('data')
         result = request.form
-
-        #print(data)
     makeQRcode(id)
     return render_template('result.html', result = result)
 
@@ -55,6 +46,7 @@ def mypage():
     sql = f'select * from {USERNAME}'
     cursor.execute(sql)
     rows = cursor.fetchall()
+
     print(rows)
     return render_template('mypage.html', rows=rows)
 

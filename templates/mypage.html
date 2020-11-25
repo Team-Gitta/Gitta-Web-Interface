@@ -1,29 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/mypage.css') }}">
-</head>
-<body><div class="container">
-  <header class="header">
-    <h1>Gitta</h1>
-  </header>
-  <div class="content">
-    <aside class="aside">
-      <h3>Sidebar</h3>
-      <a href="/register">REGISTER</a>
-      <p>~~</aside>
-    <main class="main">
-      <table>
+{% extends 'layout.html' %}
 
-        <th>화분이름</th>
+{% block content %}
+    <div class="mypage_info">My Page</div>
+      <table class="table table table-bordered">
+    <thead>
+    <tr>
+        <th scope="col">화분이름</th>
         <th>화분높이</th>
         <th>물받이높이</th>
         <th>물 주기</th>
         <th>물 줄 시간</th>
         <th>물 양</th>
         {%for row in rows%}
+            </tr>
+     </thead>
+            <tbody>
         <tr>
 
           <td>{{row[1]}}</td>
@@ -34,17 +25,9 @@
           <td>{{row[6]}}</td>
 
 
-        </tr>
+        </tr></tbody>
         {% endfor %}
 
 
     </table>
-    </main>
-
-  </div>
-  <footer class="footer">
-    &copy;Gitta
-  </footer>
-</div>
-</body>
-</html>
+{% endblock %}
