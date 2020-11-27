@@ -63,16 +63,3 @@ html,body {
 .footer {
   font-size: 1px;
 }
-
-  table {
-    border: 1px solid #444444;
-    border-collapse: collapse;
-  }
-  th, td {
-    border: 1px solid #444444;
-    padding: 10px;
-  }
-
-  .qrimg{ flex: 1;}
-
-  .result_table{flex:1;}

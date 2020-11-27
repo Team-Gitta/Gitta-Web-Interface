@@ -1,15 +1,22 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-      <h2>Main Content</h2>
+      <div class="register_info">Register My Plant</div>
         <form action="/result", method="POST">
-            <p>화분이름<input type="text" name="name" required></p>
-            <p>화분높이<input type="number" name="pot_height" min="1" max="30" required></p>
-            <p>물받이높이<input type="number" name="tray_height" min="1" max="30" required></p>
-            <p>물주기(1~30)<input type="number" name="period" min="1" max="30"  required></p>
-            <p>물 줄 시간<input type="time" name="time" require></p>
-            <p>물 양(1~5)<input type="number" name="water" min="1" max="5" require></p>
-            <input type="submit" value="REGISTER">
+        <div class="register_box">
+            <div class="form_1">
+            <div>식물 이름<input type="text" name="name" required ></div>
+            <div>화분 높이<input type="number" name="pot_height" min="1" max="100" required ></div>
+            <div>물받이 높이<input type="number" name="tray_height" min="1" max="100" required ></div>
+            </div>
+
+            <div class="form_2">
+                <div>급수 주기(1~30)<input type="number" name="period" min="1" max="30"  required ></div>
+                <div>급수 시간<input type="time" name="time" require></div>
+                <div>급수량(mL)<input type="number" name="water" min="50" max="500" step="50" require ></div> </div>   </div>
+            <div><input class="btn" type="submit" value="REGISTER"></div>
+
+
         </form>
-      <p>~~~</p>
+
 {% endblock %}
