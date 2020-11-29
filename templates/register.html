@@ -6,17 +6,28 @@
         <div class="register_box">
             <div class="form_1">
             <div>식물 이름<input type="text" name="name" required ></div>
-            <div>화분 높이<input type="number" name="pot_height" min="1" max="100" required ></div>
-            <div>물받이 높이<input type="number" name="tray_height" min="1" max="100" required ></div>
+             <div>급수 주기(~일에 한번)<input type="number" name="period" min="1" max="30"  required ></div>
+                <div>급수 시간<input type="time" name="time" require></div>
+                <div>급수량(mL)<input type="number" name="water" min="50" max="500" step="50" require ></div>
+
+
             </div>
 
             <div class="form_2">
-                <div>급수 주기(1~30)<input type="number" name="period" min="1" max="30"  required ></div>
-                <div>급수 시간<input type="time" name="time" require></div>
-                <div>급수량(mL)<input type="number" name="water" min="50" max="500" step="50" require ></div> </div>   </div>
+                 <div>화분 위치  :
+                     <select name="location" width="">
+                         <option value="A">A</option>
+                         <option value="B">B</option>
+                         <option value="C">C</option>
+                     </select></div>
+                <div class="mapimg"> <img src="{{ url_for('static', filename='images/map.png') }}"></div>
+            </div>
+
+
+             </div>
             <div><input class="btn" type="submit" value="REGISTER"></div>
 
-
+        </form>
         </form>
 
 {% endblock %}

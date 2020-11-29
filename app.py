@@ -7,7 +7,7 @@ load_dotenv(verbose=True)
 USERNAME = "seohyun218"
 db = pymysql.connect(host=os.getenv("HOST"), user=os.getenv("USER"), port=int(os.getenv("PORT")), passwd=os.getenv("PASSWD"), db=os.getenv("DB"), charset='utf8')
 cursor = db.cursor()
-#cursor.execute(f'create table {USERNAME}(id VARCHAR(200) NOT NULL, name VARCHAR(200), pot_height int(50), tray_height int(50), period int(50), time varchar(50), water int(50), PRIMARY KEY(id));')
+#cursor.execute(f'create table users (id VARCHAR(200) NOT NULL, name VARCHAR(200), period int(50), time varchar(50), water int(50), location varchar(50),PRIMARY KEY(id));')
 #cursor.execute(f'insert into {USERNAME} VALUES("seohyun218_flowername_1","rose",70,10,20,"13:10",3)')
 db.commit()
 
@@ -27,14 +27,13 @@ def result():
     if request.method == 'POST':
         result = request.form
         name = request.form.get('name')
-        pot_height = int(request.form.get('pot_height'))
-        tray_height = int(request.form.get('tray_height'))
         period = int(request.form.get('period'))
         time = str(request.form.get('time'))
         water = int(request.form.get('water'))
+        location = request.form.get('location')
 
         id = USERNAME+'_'+name
-        insert = 'insert into {} VALUES( \"{}\", \"{}\", {}, {}, {}, \"{}\", {})'.format(USERNAME, id, name, pot_height, tray_height, period, time, water)
+        insert = 'insert into users VALUES( \"{}\", \"{}\", {}, \"{}\", {}, \"{}\")'.format(id, name, period, time, water, location)
         cursor.execute(insert)
         db.commit()
         result = request.form
@@ -43,7 +42,7 @@ def result():
 
 @app.route("/mypage")
 def mypage():
-    sql = f'select * from {USERNAME}'
+    sql = f'select * from users'
     cursor.execute(sql)
     rows = cursor.fetchall()
 

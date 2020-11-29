@@ -6,11 +6,10 @@
     <thead>
     <tr>
         <th scope="col">식물 이름</th>
-        <th>화분 높이</th>
-        <th>물받이 높이</th>
-        <th>급수 주기</th>
+        <th>급수 주기(~일에 한번)</th>
         <th>급수 시간</th>
         <th>급수량(mL)</th>
+        <th>화분 위치</th>
         {%for row in rows%}
             </tr>
      </thead>
@@ -22,7 +21,6 @@
           <td>{{row[3]}}</td>
           <td>{{row[4]}}</td>
           <td>{{row[5]}}</td>
-          <td>{{row[6]}}</td>
 
 
         </tr></tbody>

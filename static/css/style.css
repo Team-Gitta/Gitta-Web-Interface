@@ -159,7 +159,7 @@ input:focus {
     box-shadow: 0 0 5px #636363;
 }
 .btn{
-    margin-top: 20px;
+    margin-top: 0px;
     background: #d8e8dd;
   border: 4px solid #0e3433;
     font-size: 40px;
@@ -168,9 +168,10 @@ input:focus {
   text-decoration: none;
     border-radius: 20px;
     box-shadow: 0 0 10px #b1b1b1;
-    margin-left: 35%;
     color: #0e3433;
-    margin-top: 5%;
+     margin-left: 35%;
+    width:200px;
+
      font-family: 'Nerko One', cursive
 }
 
@@ -217,3 +218,30 @@ td{
 }
 
 
+select{
+    width:100px;
+    text-align: center;
+    text-align-last: center;
+    height: 40px;
+    border-radius: 10px;
+        border: 3px solid #88997c;
+
+
+}
+option{
+    text-align: center;
+
+}
+
+select:focus {
+    outline: none !important;
+    background-color: #ffffff;
+    border: 3px solid #88997c;
+    box-shadow: 0 0 5px #636363;
+}
+.mapimg img{
+    width:70%;
+    border: 3px solid #88997c;
+    border-radius: 10px;
+
+}
